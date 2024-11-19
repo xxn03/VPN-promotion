@@ -39,15 +39,41 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        .copy-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #218838;
+        }
     </style>
+    <script>
+        function copyCode() {
+            const code = "xJ3XTCEW";
+            navigator.clipboard.writeText(code).then(() => {
+                alert("邀请码已复制：" + code);
+            }).catch(err => {
+                alert("复制失败，请手动复制。");
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>享受高速、自由的网络体验</h1>
-        <p>是否正在寻找一款可以在多个设备上使用的VPN服务？<br>Biuuu VPN可以支持鸿蒙、安卓、iOS、Windows、macOS、Linux，甚至是路由器，实现真正的多平台共享。</p>
-        <p>它不限速度，使用流畅稳定，还可以访问ChatGPT和其他网络资源，适合需要快速、安全网络体验的用户。</p>
+        <p>是否正在寻找一款可以在多个设备上使用的VPN服务？<br>Biuuu VPN支持鸿蒙、安卓、iOS、Windows、macOS、Linux，甚至是路由器，实现真正的多平台共享。</p>
+        <p>不限速度，使用流畅稳定，还可以访问ChatGPT，适合需要快速、安全网络体验的用户。</p>
         <p>点击下方按钮，使用我的邀请码 <strong>xJ3XTCEW</strong> 购买VPN，立即解锁无限制的网络世界！</p>
-        <a href="https://biuuu.one" class="btn" target="_blank">立即购买</a>
+        <button class="copy-btn" onclick="copyCode()">一键复制邀请码</button>
+        <br><br>
+        <a href="https://biuuu.one/system/plan" class="btn" target="_blank">立即购买</a>
     </div>
 </body>
 </html>
